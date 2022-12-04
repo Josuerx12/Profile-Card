@@ -5,21 +5,39 @@
 
 @media screen and (max-width:768px) {
     body {
-        margin: 0;
-        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .profile-card {
-        width: auto;
+    .container {
+        min-height: 100vh;
+        width: 330px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 body {
-    margin-top: 300px;
     font-family: 'Nunito', sans-serif;
     background: url(../assets/imgs/background.jpg);
-    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110% 110%;
+    height: 100vh;
+    animation: shrink 10s infinite alternate;
 }
+
+@keyframes shrink {
+    0% {
+      background-size: 110% 110%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
 
 a {
     text-decoration: none;
@@ -80,14 +98,16 @@ p {
     font-weight: 600;
 }
 
-span {
+h4 {
     font-weight: 600;
 }
 
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
 
 .profile-card {
@@ -106,11 +126,12 @@ span {
 }
 
 .profile-pic {
+    width: 120px;
+    height: 120px;
     border-radius: 70px;
     margin-top: 20px;
     margin-bottom: 10px;
     box-shadow: 2px 4px, rgba(0, 0, 0, 0.699);
-    z-index: -1;
     background-size: cover;
 }
 
